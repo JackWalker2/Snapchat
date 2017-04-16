@@ -94,11 +94,78 @@
                                 <action selector="logoutTapped:" destination="2uL-ce-yx1" id="6bC-IM-Ifb"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1eA-0k-qUJ">
+                            <connections>
+                                <segue destination="UGY-Tu-zdN" kind="show" id="RS2-gK-Efn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IX2-si-O1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1599" y="127"/>
+        </scene>
+        <!--Picture View Controller-->
+        <scene sceneID="WfZ-2T-4CC">
+            <objects>
+                <viewController id="UGY-Tu-zdN" customClass="PictureViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IBO-QQ-038"/>
+                        <viewControllerLayoutGuide type="bottom" id="yhG-I3-jqW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TNO-fE-wkD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eMJ-F1-HrR">
+                                <rect key="frame" x="67" y="84" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="45B-xA-oKd"/>
+                                    <constraint firstAttribute="width" constant="240" id="6t6-Nt-gpd"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5d-4W-C78">
+                                <rect key="frame" x="67.5" y="227" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-9u-JaB">
+                                <rect key="frame" x="171" y="277" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="UGY-Tu-zdN" eventType="touchUpInside" id="yj6-Ie-z8K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r5d-4W-C78" firstAttribute="top" secondItem="eMJ-F1-HrR" secondAttribute="bottom" constant="15" id="2AN-8v-dd0"/>
+                            <constraint firstItem="r5d-4W-C78" firstAttribute="centerX" secondItem="TNO-fE-wkD" secondAttribute="centerX" id="3dS-ew-h5C"/>
+                            <constraint firstItem="CRP-9u-JaB" firstAttribute="top" secondItem="r5d-4W-C78" secondAttribute="bottom" constant="20" id="FN7-zz-uZj"/>
+                            <constraint firstItem="eMJ-F1-HrR" firstAttribute="centerX" secondItem="TNO-fE-wkD" secondAttribute="centerX" id="GPS-DF-NBL"/>
+                            <constraint firstItem="r5d-4W-C78" firstAttribute="width" secondItem="eMJ-F1-HrR" secondAttribute="width" id="Sky-UJ-3j2"/>
+                            <constraint firstItem="CRP-9u-JaB" firstAttribute="centerX" secondItem="TNO-fE-wkD" secondAttribute="centerX" id="VFa-F8-FHv"/>
+                            <constraint firstItem="eMJ-F1-HrR" firstAttribute="top" secondItem="IBO-QQ-038" secondAttribute="bottom" constant="20" id="u76-3v-luO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6CD-xO-9m6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="eMu-d0-7WW">
+                            <connections>
+                                <action selector="cameraTapped:" destination="UGY-Tu-zdN" id="hXJ-p8-DcQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="r5d-4W-C78" id="aoA-nr-LZv"/>
+                        <outlet property="imageView" destination="eMJ-F1-HrR" id="Oal-Ad-yCR"/>
+                        <outlet property="nextButton" destination="CRP-9u-JaB" id="5Ua-Im-eLe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vkU-yg-QYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2335" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ktm-Ic-Tgs">
