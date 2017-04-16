@@ -16,6 +16,7 @@
 		D11DD3421EA1A70300F9DA31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D11DD3411EA1A70300F9DA31 /* GoogleService-Info.plist */; };
 		D166F5041EA258EC00924CA7 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166F5031EA258EC00924CA7 /* SnapsViewController.swift */; };
 		D166F5061EA25C9B00924CA7 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166F5051EA25C9B00924CA7 /* PictureViewController.swift */; };
+		D1D39ADB1EA2FB76000A518F /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D39ADA1EA2FB76000A518F /* SelectUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D11DD3411EA1A70300F9DA31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D166F5031EA258EC00924CA7 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		D166F5051EA25C9B00924CA7 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		D1D39ADA1EA2FB76000A518F /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		E2DB27FDCDEB22F4973902D8 /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				D11DD3311EA1A47100F9DA31 /* SignInViewController.swift */,
 				D166F5031EA258EC00924CA7 /* SnapsViewController.swift */,
 				D166F5051EA25C9B00924CA7 /* PictureViewController.swift */,
+				D1D39ADA1EA2FB76000A518F /* SelectUserViewController.swift */,
 				D11DD3331EA1A47100F9DA31 /* Main.storyboard */,
 				D11DD3361EA1A47100F9DA31 /* Assets.xcassets */,
 				D11DD33B1EA1A47100F9DA31 /* Info.plist */,
@@ -224,6 +227,7 @@
 			files = (
 				D11DD3321EA1A47100F9DA31 /* SignInViewController.swift in Sources */,
 				D166F5061EA25C9B00924CA7 /* PictureViewController.swift in Sources */,
+				D1D39ADB1EA2FB76000A518F /* SelectUserViewController.swift in Sources */,
 				D11DD3301EA1A47100F9DA31 /* AppDelegate.swift in Sources */,
 				D166F5041EA258EC00924CA7 /* SnapsViewController.swift in Sources */,
 			);
