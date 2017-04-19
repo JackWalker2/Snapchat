@@ -56,7 +56,6 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             snap.descrip = (snapshot.value as! NSDictionary)["description"] as! String
             snap.key = snapshot.key
             snap.uuid = (snapshot.value as! NSDictionary)["uuid"] as! String
-            snap.password = (snapshot.value as! NSDictionary)["password"] as! String
             
             self.snaps.append(snap)
             self.tableView.reloadData()

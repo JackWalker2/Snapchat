@@ -150,7 +150,7 @@
                                 <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.73587929419999998" blue="0.063837199620000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="VJR-9b-5qI" firstAttribute="leading" secondItem="Kcz-XA-ujO" secondAttribute="leading" id="LCk-qr-kiZ"/>
                             <constraint firstItem="5hP-vg-OXx" firstAttribute="leading" secondItem="Kcz-XA-ujO" secondAttribute="leading" id="OVM-hZ-I1i"/>
