@@ -43,25 +43,26 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             print("Sign In")
             if error != nil {
-                print("Error: \(String(describing: error))")
                 FIRAuth.auth()?.createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
-                    print("User created")
                     if error != nil {
-                        print("Error: \(String(describing: error))")
                         let alertVC = UIAlertController(title: "Incorrect Password!", message: nil, preferredStyle: .alert)
                         let OKaction = UIAlertAction(title: "OK", style: .default, handler: nil)
                         alertVC.addAction(OKaction)
                         self.present(alertVC, animated: true, completion: nil)
+                        self.passwordTextField.text = ""
                     } else {
-                        print("User Created Successfully")
-                        
-                        FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
-                        FIRDatabase.database().reference().child("users").child(user!.uid).child("password").setValue(self.passwordTextField.text!)
-                        
-                        self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                        let alertVC = UIAlertController(title: "User Not Found!", message: "Would you like to create a new account?", preferredStyle: .alert)
+                        let newAccount = UIAlertAction(title: "New Account", style: .default, handler: { (action) in
+                            FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
+                            FIRDatabase.database().reference().child("users").child(user!.uid).child("password").setValue(self.passwordTextField.text!)
+                            self.performSegue(withIdentifier: "signInSegue", sender: nil)})
+                        alertVC.addAction(newAccount)
+                        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+                            FIRAuth.auth()?.currentUser!.delete(completion: nil)})
+                        alertVC.addAction(cancel)
+                        self.present(alertVC, animated: true, completion: nil)
                     }
-                })
-            } else {
+                })} else {
                 print("Signed In Successfully")
                 self.performSegue(withIdentifier: "signInSegue", sender: nil)
             }

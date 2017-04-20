@@ -25,8 +25,9 @@ class ViewSnapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        label.text = snap.descrip
         imageView.sd_setImage(with: URL(string: snap.imageURL))
+        label.text = snap.descrip
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

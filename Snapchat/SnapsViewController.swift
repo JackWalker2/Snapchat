@@ -14,6 +14,7 @@ import FirebaseAuth
 class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var snaps : [Snap] = []
+    var snap = Snap()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -96,7 +97,6 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             tableView.deselectRow(at: indexPath, animated: true)
         } else {
         let snap = snaps[indexPath.row]
-        
         performSegue(withIdentifier: "viewSnapSegue", sender: snap)
         }
     }

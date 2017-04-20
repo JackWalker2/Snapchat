@@ -96,9 +96,18 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h52-4M-qQh">
+                                <rect key="frame" x="150" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="lbd-S2-7Vy"/>
+                                    <constraint firstAttribute="height" constant="75" id="u0S-Vo-ZVu"/>
+                                </constraints>
+                                <state key="normal" image="Camera"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lwA-Kp-ccg" firstAttribute="top" secondItem="h52-4M-qQh" secondAttribute="bottom" constant="20" id="IUt-V8-kgc"/>
                             <constraint firstItem="60c-1Q-cq9" firstAttribute="top" secondItem="mtq-h7-5fA" secondAttribute="bottom" id="SCw-EU-mvX"/>
                             <constraint firstAttribute="trailing" secondItem="60c-1Q-cq9" secondAttribute="trailing" id="ath-i0-39L"/>
                             <constraint firstItem="60c-1Q-cq9" firstAttribute="leading" secondItem="iZ3-Td-eGH" secondAttribute="leading" id="lok-4K-zPV"/>
@@ -150,7 +159,7 @@
                                 <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VJR-9b-5qI" firstAttribute="leading" secondItem="Kcz-XA-ujO" secondAttribute="leading" id="LCk-qr-kiZ"/>
                             <constraint firstItem="5hP-vg-OXx" firstAttribute="leading" secondItem="Kcz-XA-ujO" secondAttribute="leading" id="OVM-hZ-I1i"/>
@@ -289,5 +298,6 @@
     </scenes>
     <resources>
         <image name="Background_Final" width="780" height="1258"/>
+        <image name="Camera" width="512" height="512"/>
     </resources>
 </document>

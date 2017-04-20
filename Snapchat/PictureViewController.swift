@@ -67,6 +67,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         let imagesFolder = FIRStorage.storage().reference().child("Images")
         
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.2)!
+        descriptionTextField.isEnabled = false
         
         
         imagesFolder.child("\(uuid).jpg").put(imageData, metadata: nil, completion: {(metadata, error) in
