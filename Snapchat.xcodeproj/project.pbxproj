@@ -21,6 +21,7 @@
 		D1D39ADB1EA2FB76000A518F /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D39ADA1EA2FB76000A518F /* SelectUserViewController.swift */; };
 		D1D39ADD1EA319AB000A518F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D39ADC1EA319AB000A518F /* User.swift */; };
 		D1F338BA1EA8980800453691 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F338B91EA8980800453691 /* AddFriendViewController.swift */; };
+		D1F338BC1EA8F18F00453691 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F338BB1EA8F18E00453691 /* FriendListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		D1D39ADA1EA2FB76000A518F /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		D1D39ADC1EA319AB000A518F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D1F338B91EA8980800453691 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		D1F338BB1EA8F18E00453691 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		E2DB27FDCDEB22F4973902D8 /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				D1D39ADA1EA2FB76000A518F /* SelectUserViewController.swift */,
 				D176D1761EA4FCEB000F2FAC /* ViewSnapViewController.swift */,
 				D1F338B91EA8980800453691 /* AddFriendViewController.swift */,
+				D1F338BB1EA8F18E00453691 /* FriendListViewController.swift */,
 				D1D39ADC1EA319AB000A518F /* User.swift */,
 				D176D1741EA4F8E5000F2FAC /* snap.swift */,
 				D11DD3331EA1A47100F9DA31 /* Main.storyboard */,
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F338BC1EA8F18F00453691 /* FriendListViewController.swift in Sources */,
 				D176D1751EA4F8E5000F2FAC /* snap.swift in Sources */,
 				D11DD3321EA1A47100F9DA31 /* SignInViewController.swift in Sources */,
 				D166F5061EA25C9B00924CA7 /* PictureViewController.swift in Sources */,

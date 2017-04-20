@@ -23,6 +23,18 @@ class AddFriendViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
     }
+
+    @IBAction func addTapped(_ sender: Any) {
+        FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("friends").childByAutoId().child("email").setValue(emailTextField.text!)
+        emailTextField.resignFirstResponder()
+        emailTextField.text! = ""
+        let alertVC = UIAlertController(title: "Contact Added!", message: nil, preferredStyle: .alert)
+        let OKaction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertVC.addAction(OKaction)
+        self.present(alertVC, animated: true, completion: nil)
+        
+        
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailTextField.resignFirstResponder()
@@ -31,10 +43,6 @@ class AddFriendViewController: UIViewController, UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         emailTextField.resignFirstResponder()
-    }
-
-    @IBAction func addTapped(_ sender: Any) {
-        FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("friends").childByAutoId().setValue(emailTextField.text!)
     }
     
 
